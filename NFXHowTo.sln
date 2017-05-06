@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSkeleton", "ConsoleSkeleton\ConsoleSkeleton.csproj", "{A2CFE695-AC4C-4048-A6C0-F117C6F77C60}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Glue", "Glue", "{35CA443E-0568-4698-88BF-688EF304B526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.BusinessDomain", "Glue\XYZ.BusinessDomain\XYZ.BusinessDomain.csproj", "{C30EB394-B6F0-4DC3-8223-E377990611F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.Clients", "Glue\XYZ.Clients\XYZ.Clients.csproj", "{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,20 @@ Global
 		{A2CFE695-AC4C-4048-A6C0-F117C6F77C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2CFE695-AC4C-4048-A6C0-F117C6F77C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2CFE695-AC4C-4048-A6C0-F117C6F77C60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30EB394-B6F0-4DC3-8223-E377990611F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30EB394-B6F0-4DC3-8223-E377990611F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30EB394-B6F0-4DC3-8223-E377990611F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30EB394-B6F0-4DC3-8223-E377990611F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C30EB394-B6F0-4DC3-8223-E377990611F8} = {35CA443E-0568-4698-88BF-688EF304B526}
+		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3} = {35CA443E-0568-4698-88BF-688EF304B526}
 	EndGlobalSection
 EndGlobal
