@@ -1,12 +1,12 @@
 # ConsoleSkeleton
 
-See (Program.cs)[Program.cs]
+See [Program.cs](./Program.cs)
 
 This is a skeleton for a typical NFX console application.
 
 It demonstrates:
 
-* Setting up an application
+* Setting up an application container
 * Writing highlighted content: help etc.
 * Using command line arguments
 * Injecting dependency -  inject logic module from command line with configuration
@@ -16,7 +16,7 @@ It demonstrates:
 Example:  
   
 ```json
-  ConsoleSkeleton -logic type="ConsoleSkeleton.CountLogic, ConsoleSkeleton" from=5 to=15
+ ConsoleSkeleton -logic type="ConsoleSkeleton.CountLogic, ConsoleSkeleton" from=5 to=15
 ```
 
 ```json 
