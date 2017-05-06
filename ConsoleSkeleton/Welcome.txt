@@ -1,1 +1,5 @@
-﻿Welcome to test Console App Skeleton
+﻿<push><b color=black><f color=white>
+Console Skeleton Application<f color=gray>
+Copyright (c) 2017 ITAdapter 
+Author: D.Khmaladze
+<pop>

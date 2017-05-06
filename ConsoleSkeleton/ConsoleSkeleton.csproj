@@ -75,5 +75,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Welcome.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Help.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,31 @@
+﻿<push>
+<f color=magenta>
+ Usage:
+<f color=white>
+   ConsoleSkeleton <f color=gray>[/s | /silent]
+              [/logic <f color=darkCyan>[<f color=darkRed>type<f color=darkCyan>= logic_type]
+                      [<f color=darkRed>config-param1<f color=darkCyan>= value1]
+              <f color=gray>
+              ]
+
+<f color=green>logic_type<f color=gray> - Fully-qualified path to class descending Logic
+
+<f color=magenta>
+ Options:
+
+ <f color=darkCyan>/h | /help | /?<f color=gray> - displays help message
+ <f color=darkCyan>/s | /silent<f color=gray> - tells the tool not to output extra messages
+
+
+<f color=magenta>
+ Examples:
+
+<f color=yellow>
+  ConsoleSkeleton -logic type="ConsoleSkeleton.CountLogic, ConsoleSkeleton" from=5 to=15<f color=gray>
+Injects a count logic module that outputs numbers from 5 to 15
+
+<f color=yellow>
+ ConsoleSkeleton -logic type="ConsoleSkeleton.SaySomethingLogic, ConsoleSkeleton" what-to-say="Yes, This is my yellow message" primary-color=yellow <f color=gray>
+Injects a logic that displays a message with the specifed color
+
+<pop>

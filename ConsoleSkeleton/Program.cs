@@ -26,30 +26,43 @@ namespace ConsoleSkeleton
   /// </example>
   class Program
   {
-    static void Main(string[] args)
+    static int Main(string[] args)
     {
       try
       {
         using (var app = new ServiceBaseApplication(args, null))//explicit rootConfig = null - will search the co-located file
           run(app);
 
+        if (System.Diagnostics.Debugger.IsAttached)
+        {
+          Console.WriteLine("Strike a key...");
+          Console.ReadKey();
+        }
 
-        Console.ReadKey();
+        return 0;
       }
       catch(Exception error)
       {
         ConsoleUtils.Error("Program leaked: {0}\n Trace: {1}".Args(error.ToMessageWithType(), error.StackTrace));
+        return -1;
       }
     }
 
     private static void run(ServiceBaseApplication app)
     {
+      if (app.CommandArgs["?", "h", "help"].Exists)
+      {
+        //GetText is an extension method that reads an embedded resource
+        //relative to the specfied type location
+        ConsoleUtils.WriteMarkupContent(typeof(Program).GetText("Help.txt"));
+        return;
+      }
+
       var silent = app.CommandArgs["s", "silent"].Exists;
       if (!silent) 
-        ConsoleUtils.WriteMarkupContent(typeof(Program).GetText("Welcome.txt")); //GetText is an extension method that reads an embedded resource
-                                                                                 //relative to the specfied type location
+        ConsoleUtils.WriteMarkupContent(typeof(Program).GetText("Welcome.txt")); 
       
-      Console.WriteLine();
+      if (!silent) Console.WriteLine();
 
       //Get logic switch ' -logic' from command args line as config section
       //notice no if statements, if nodes does not exist, sentinels are returned
@@ -63,7 +76,7 @@ namespace ConsoleSkeleton
       //execute injected logic module
       logic.Execute();
 
-      ConsoleUtils.Info("The End");
+      if (!silent) ConsoleUtils.Info("The End");
     }
 
   }
