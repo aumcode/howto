@@ -4,6 +4,10 @@ using NFX.Glue;
 
 namespace XYZ.BusinessDomain.Contracts
 {
+  
+  /// <summary>
+  /// Declare a service that return wheather
+  /// </summary>
   [Glued]
   public interface IWheather
   {
