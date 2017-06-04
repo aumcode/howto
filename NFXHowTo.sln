@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSkeleton", "ConsoleSkeleton\ConsoleSkeleton.csproj", "{A2CFE695-AC4C-4048-A6C0-F117C6F77C60}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Glue", "Glue", "{35CA443E-0568-4698-88BF-688EF304B526}"
+	ProjectSection(SolutionItems) = preProject
+		Glue\README.md = Glue\README.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.BusinessDomain", "Glue\XYZ.BusinessDomain\XYZ.BusinessDomain.csproj", "{C30EB394-B6F0-4DC3-8223-E377990611F8}"
 EndProject

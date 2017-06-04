@@ -4,12 +4,17 @@ using NFX.Glue;
 
 namespace XYZ.BusinessDomain.Contracts
 {
-  
+  // WCF Users: notice no [OperationContract], [DataContract] attributes.
+  // The payload serialization is polymorphic and automatic as Glue is not 
+  // purposed for "one size fits all" tasks such as SOAP, REST etc. (which it does not support),
+  // consequently Glue is much simpler and faster than WCF
+
+
   /// <summary>
-  /// Declare a service that return wheather
+  /// Declares a service that returns weather
   /// </summary>
   [Glued]
-  public interface IWheather
+  public interface IWeather
   {
     WeatherDay GetTodaysWheather(string area);
     WeatherDay[] GetWheatherForecast(string area, DateTime start, int days);
