@@ -8,9 +8,9 @@ using NFX.Environment;
 namespace ConsoleSkeleton
 {
   /// <summary>
-  /// This is a skeleton of a typical NFX console app.
+  /// This is a skeleton of a typical NFX console application (CLI).
   /// It demonstrates:
-  ///   a. Setting up an application
+  ///   a. Setting up an application container
   ///   b. Writing highlighted content: help etc.
   ///   c. Using command line arguments
   ///   d. Injecting dependency -  inject logic module from command line with configuration
@@ -26,6 +26,7 @@ namespace ConsoleSkeleton
     {
       try
       {
+        //Create a singleton application container context, and Dispose it with `using`
         using (var app = new ServiceBaseApplication(args, null))//explicit rootConfig = null - will search the co-located file
           run(app);
 
@@ -46,9 +47,11 @@ namespace ConsoleSkeleton
 
     private static void run(ServiceBaseApplication app)
     {
+      //The command-line arguments are already parsed into configuration object accessible via `CommandArgs`
+      //property of the application context
       if (app.CommandArgs["?", "h", "help"].Exists)
       {
-        //GetText is an extension method that reads an embedded resource
+        //`GetText(path)` is an extension method that reads an embedded resource
         //relative to the specfied type location
         ConsoleUtils.WriteMarkupContent(typeof(Program).GetText("Help.txt"));
         return;
@@ -61,12 +64,12 @@ namespace ConsoleSkeleton
       if (!silent) Console.WriteLine();
 
       //Get logic switch ' -logic' from command args line as config section
-      //notice no if statements, if nodes does not exist, sentinels are returned
-      //we could use if (cfgLogic.Exists)....
+      //notice no `if` statements, if addressed nodes do not exist, sentinels are returned instead
+      //we could use `if (cfgLogic.Exists)....`
       var cfgLogic = app.CommandArgs["logic"];
 
-      //Inject the logic from config, use DefaultLogic if type is not specified
-      //this will call Configure(cfgLogic) on the Logic instance
+      //Inject the logic from config (BY CONFIGURATION), use DefaultLogic if type is not specified (BY CONVENTION).
+      //This will call Configure(cfgLogic) on the Logic instance after its creation
       var logic = FactoryUtils.MakeAndConfigure<Logic>(cfgLogic, typeof(DefaultLogic));
 
       //execute injected logic module

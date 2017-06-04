@@ -6,11 +6,21 @@ using NFX.Environment;
 namespace ConsoleSkeleton
 {
 
+  // The idiology of `IConfigurable` allows for configuration from various sources,
+  // as this demo shows, the CommandLineArgs is one of the configuration types,
+  // therefore this class and its dependents may get configured using file, command args,
+  // db or any other configuration source
+
+  /// <summary>
+  /// Denotes an abstract configurable Logic module a'la "strategy".
+  /// </summary>
   public abstract class Logic : IConfigurable
   {
     [Config(Default = ConsoleColor.Cyan)]//<--- CONFIG with default
     public ConsoleColor PrimaryColor { get; set; }
 
+    //IConfigSectionNode represents a tree level/node from which the configuration of
+    //THIS instance should take place
     public void Configure(IConfigSectionNode node)
     {
       ConfigAttribute.Apply(this, node);//this will interpret all [CONFIG] decorations
@@ -20,20 +30,18 @@ namespace ConsoleSkeleton
     public abstract void Execute();
   }
 
-
+  // ---------------------------------------------------
   public class DefaultLogic : Logic
   {
-    [Config] //<----- CONFIG property
-    public string WhatToSay { get; set; }
-
     public override void Execute()
     {
       Console.ForegroundColor = PrimaryColor;
-      Console.WriteLine("Default Logic");
+      Console.WriteLine("Default Logic Message");
     }
   }
 
-
+  // ---------------------------------------------------
+  // ConsoleSkeleton -logic type = "ConsoleSkeleton.SaySomethingLogic, ConsoleSkeleton" what-to-say="Yes, This is my yellow message" primary-color=yellow
   public class SaySomethingLogic : Logic
   {
     [Config]
@@ -46,6 +54,8 @@ namespace ConsoleSkeleton
     }
   }
 
+  // ---------------------------------------------------
+  // ConsoleSkeleton -logic type="ConsoleSkeleton.CountLogic, ConsoleSkeleton" from=5 to=15
   public class CountLogic : Logic
   {
     [Config(Default = 1)] //<--- CONFIG with default
@@ -61,8 +71,5 @@ namespace ConsoleSkeleton
         Console.WriteLine("Counting #{0}".Args(i));
     }
   }
-
-
-
 
 }
