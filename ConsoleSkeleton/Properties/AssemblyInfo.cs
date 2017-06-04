@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ConsoleSkeleton")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ITADAPTER")]
+[assembly: AssemblyCompany("Agnicore Inc")]
 [assembly: AssemblyProduct("ConsoleSkeleton")]
-[assembly: AssemblyCopyright("Copyright © ITADAPTER 2017")]
+[assembly: AssemblyCopyright("Copyright © Agnicore Inc 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
