@@ -1,6 +1,6 @@
 # NFX.Glue
 
- Glue is a distributed/remote progamming framework used to connect/"glue togeathr" classes which implement operation contract interfaces. 
+ Glue is a distributed/remote programming framework used to connect/"glue together" classes which implement operation contract interfaces. 
 
  Glue is an object-oriented RPC technology based on contracts, optional instances, and methods (verbs/procedures). Conceptually 
  it is akin to WCF, however Glue is purposely built only for tight distributed systems written in NFX. 
@@ -21,10 +21,10 @@
  (which it does not support on purpose), consequently Glue is much simpler and faster than WCF.
 
  In NFX, the corresponding service layers are built using the following technologies:
- * Glue - interprocess, cluster, private services with maximum flexibility, security and performance. Not interoperable with Web/other languages.
+ * Glue - interprocess, cluster, private services with maximum flexibility, security and performance. Not inter-operable with Web/other languages.
  * WAVE/web - REST, Web RPC - used for typical web-enabled public facing services
  * .NET WCF - used for SOAP support
 
- NFX does not implement SOAP support and there are ** no plans ** in future for supporting SOAP, WSDL and all surrounding ecosystem.
+ NFX does not implement SOAP support and there are **no plans** in future for supporting SOAP, WSDL and all surrounding ecosystem.
 
 
