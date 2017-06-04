@@ -1,6 +1,9 @@
 # howto
 
-The purpose of this repo is to show how to use various NFX features piece-by-piece. 
+NFX Documentation [http://nfxlib.com](http://nfxlib.com)
+
+
+The purpose of this repo is to show how to use various **NFX features by example**. 
 
 The major sections of NFX are segregated into separate folders with corresponding names.
 
