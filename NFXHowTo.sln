@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.BusinessDomain", "Glue\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.Clients", "Glue\XYZ.Clients\XYZ.Clients.csproj", "{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XYZ.WeatherServer", "Glue\XYZ.WeatherServer\XYZ.WeatherServer.csproj", "{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C30EB394-B6F0-4DC3-8223-E377990611F8} = {35CA443E-0568-4698-88BF-688EF304B526}
 		{F9BF4647-5AC8-46F7-BB0A-D3FF1C2F51D3} = {35CA443E-0568-4698-88BF-688EF304B526}
+		{72CC3A67-D545-4C9C-929C-5A3FA8FA3BBD} = {35CA443E-0568-4698-88BF-688EF304B526}
 	EndGlobalSection
 EndGlobal
