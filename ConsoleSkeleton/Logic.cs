@@ -6,7 +6,7 @@ using NFX.Environment;
 namespace ConsoleSkeleton
 {
 
-  // The idiology of `IConfigurable` allows for configuration from various sources,
+  // The ideology of `IConfigurable` allows for configuration from various sources,
   // as this demo shows, the CommandLineArgs is one of the configuration types,
   // therefore this class and its dependents may get configured using file, command args,
   // db or any other configuration source
