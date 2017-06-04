@@ -1,0 +1,47 @@
+﻿//This is a root of configuration
+//save it into the file that has the same name as the application entry point module.
+//since this file has a LACONF extension, it is written in Laconic configuration syntax
+//XML or JSON could have been used instead
+nfx
+{
+  //Any NFX application has a log service, if it is not declared in config, the NOPLog will be used
+  log
+  {
+    //This destination will dump everything right into console
+    destination
+    {
+      type="NFX.Log.Destinations.ConsoleDestination, NFX"
+      colored=true
+    }
+  }
+
+  //Any NFX application has a Glue stack, if it is not declared then NOPGlue will be used
+  //we want to declare bindings and endpoints for servers using the specified bindings
+  glue
+  {
+    //A named binding instance represents the way how communication will take place
+    //for this sample brevity, many transport parameters are left default: leasing, tcp, buffer sizes etc. 
+    bindings
+    {
+      binding { name="sync"  type="NFX.Glue.Native.SyncBinding, NFX" }
+      binding { name="async" type="NFX.Glue.Native.MpxBinding, NFX" }
+    }
+
+    //Declare the endpoints, the network address syntax depends on bindings used
+    servers
+    {
+      //The `node` parameter has a binding part `sync` which must be declared in `/bindings` section above
+      server 
+      { 
+        name="SyncWeather"
+        node="sync://localhost:9001"  contract-servers=$"XYZ.WeatherServer.Weather, XYZ.WeatherServer" 
+      }
+      server 
+      { 
+        name="AsyncWeather"
+        node="async://localhost:9002" contract-servers=$"XYZ.WeatherServer.Weather, XYZ.WeatherServer" 
+      }
+    }
+  }
+
+}

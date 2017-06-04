@@ -44,6 +44,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Security\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"$(SolutionDir)packages\NFX.3.4.0.1\tools\gluec" "$(TargetPath)" /o out="$(SolutionDir)Glue\XYZ.Clients" cl-suffix="GlueClient"</PostBuildEvent>

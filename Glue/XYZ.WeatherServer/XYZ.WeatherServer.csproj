@@ -48,6 +48,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="XYZ.WeatherServer.laconf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XYZ.BusinessDomain\XYZ.BusinessDomain.csproj">
