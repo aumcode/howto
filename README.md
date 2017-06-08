@@ -1,5 +1,11 @@
 # howto
 
+How to do things with NFX framewrok - **by example**.
+
+License: Apache 2.0
+
+[NFX Library on GitHub](https://github.com/aumcode/nfx)
+
 NFX Documentation [http://nfxlib.com](http://nfxlib.com)
 
 
@@ -7,7 +13,7 @@ The purpose of this repo is to show how to use various **NFX features by example
 
 The major sections of NFX are segregated into separate folders with corresponding names.
 
-In the majority of cases no special documentation is required as projects are commented and 
+In the majority of cases no special documentation is required as projects are well commented and 
 self-explanatory. Just browse the projects source - all help is in the comments
 and local markdowns (if any).
 
